@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*
+{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar
+{
+    width: 0.5em;
+    background-color: #9a5404;
+}
+html::-webkit-scrollbar-thumb
+{
+    background-color: #fff;
+    border-radius: 20px;
+}
+header
+{
+    border-radius:0px 0px 50px 50px;
+    background: linear-gradient(225deg, #874902, #713d02);
+    box-shadow:  -17px 17px 34px #321b01,
+                17px -17px 34px #ca6d03;
+    width: 100%;
+    position: fixed;
+    z-index: 99%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+.logo
+{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+    font-size: 1.8em;
+    letter-spacing: 2px;
+}
+.navigation a
+{
+    color: white;
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: 500;
+    margin-left: 50px;
+    position: relative;
+    text-transform: capitalize;
+}
+.navigation a::after
+{
+    content: '';
+    position: absolute;
+    height: 3.1px;
+    border-radius: 30px;
+    width: 0;
+    bottom: -9px;
+    left: 0;
+    right: 0;
+    background:white;
+    transition: 400ms;
+}
+.navigation a:hover::after
+{
+    width: 100%;
+}
+.login-btn > button
+{
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.6em 1.8em;
+    border-radius: 50px;
+    background: linear-gradient(225deg, #874902, #713d02);
+    box-shadow:  -17px 17px 34px #5d3609,
+                17px -17px 34px #b5680e;
+    border: none;
+    color: #fff;
+    transition:400ms;
+    text-transform: capitalize;
+    margin-left:15px;
+}
+.login-btn > button:hover
+{
+    background: linear-gradient(225deg, #653804, #935004);
+}
+.login-btn > button:active
+{
+    box-shadow: inset -14px 14px 30px #2d1a04,
+            inset 14px -14px 30px #b5680e;
+}
+section
+{
+    padding: 100px 200px;
+}
+.main
+{
+    width:100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(image/pexels-burst-374147.jpg);
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.main h2
+{
+    color:white;
+    font-size: 1.9em;
+    font-weight: 700;
+}
+.main h2 span
+{
+    display: inline-block;
+    margin-top: 10px;
+    color: rgb(255, 179, 97);
+    font-size: 2.5em;
+    font-weight: 500;
+}
+.main h3
+{
+    color: #fff;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+.main .main-btn
+{
+    color: #fff;
+    background-color: saddlebrown;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em 2.18em;
+    letter-spacing: 1px;
+    border-radius: 16px;
+    margin-bottom: 40px;
+    transition: 0.7s ease;
+}
+.main .main-btn:hover
+{
+    background-color:rgb(77, 39, 12);
+    transform: scale(1.1, 1.1);
+}
+.social-icons a
+{
+    color: #fff;
+    font-size: 1.7em;
+    padding-right: 30px;
+}
+.main-2
+{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    border-radius: 0px 40px 40px 0px;
+}
+.main-2 img
+{
+    width: 400px;
+    box-shadow: 5px 5px 20px 20px rgb(94, 92, 92);
+    border-radius: 20px;
+}
+.txt-main h3
+{
+    padding: 10px;
+    text-align: center;
+    font-weight: 900;
+    letter-spacing: 1.4px;
+}
+.txt-main
+{
+    padding: 30px;
+    width: 500px;
+    height: 300px;
+    box-shadow: 5px 5px 20px 20px rgb(94, 92, 92);
+    margin-left: 200px;
+    border-radius: 20px;
+}
+.footer
+{
+    display: flex;
+    justify-content: center;
+    background-color: saddlebrown;
+    height: 10px;
+}
