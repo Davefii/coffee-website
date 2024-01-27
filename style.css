@@ -9,23 +9,24 @@
 }
 :root 
 {
+    --bg-white:white;
     --bg-black:black;
-    --bg-primary:#637E76;
-    --bg-second:#C69774;
-    --bg-third:#F8DFD4;
-    --bg-4th:#FFEFE8;
+    --bg-primary:#65451F;
+    --bg-second:#765827;
+    --bg-third:#C8AE7D;
+    --bg-4th:#EAC696;
 }
 header
 {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 20px;
 }
 .logo
 {
     color: var(--bg-black);
-    font-size: 1.5em;
+    font-size: 1.7em;
     font-weight: 600;
 }
 header nav ul li 
@@ -65,8 +66,56 @@ header nav ul li a:hover::after
     align-items: center;
     & img 
     {
-        width: 40%;
-        transform: rotate(20deg);
+        width: 35%;
+        transform: rotate(15deg);
+        filter: drop-shadow(100px 50px 200px var(--bg-second));
+    }
+    & .data
+    {
+        & h2 
+        {
+            text-transform: capitalize;
+            line-height: 50px;
+            font-size: 2em;
+        }
+        & p
+        {
+            text-transform: capitalize;
+            line-height: 50px;
+        }
+        & a 
+        {
+            text-transform: capitalize;
+            line-height: 90px;
+            padding: 5px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            color:  var(--bg-white);
+            background-color: var(--bg-primary);
+            transition: 200ms;
+        }
+        & a:hover
+        {
+            color: var(--bg-primary) ;
+            background-color: var(--bg-white);
+        }
+    }
+}
+.main-2
+{
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    & .cart 
+    {
+        & img 
+        {
+            width: 30%;
+        }
+        & .imgh
+        {
+            width: 10%;
+        }
     }
 }
 /* html::-webkit-scrollbar
