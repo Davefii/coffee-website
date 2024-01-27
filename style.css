@@ -7,7 +7,69 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-html::-webkit-scrollbar
+:root 
+{
+    --bg-black:black;
+    --bg-primary:#637E76;
+    --bg-second:#C69774;
+    --bg-third:#F8DFD4;
+    --bg-4th:#FFEFE8;
+}
+header
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+.logo
+{
+    color: var(--bg-black);
+    font-size: 1.5em;
+    font-weight: 600;
+}
+header nav ul li 
+{
+    display: inline-block;
+}
+header nav ul li a
+{
+    margin-left: 20px;
+    color: var(--bg-black);
+    font-size: 1.2em;
+    font-weight: 400;
+    text-decoration: none;
+    position: relative;
+}
+header nav ul li a::after
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -9px;
+    height: 4px;
+    width: 0;
+    background-color: var(--bg-black);
+    transition: 200ms;
+}
+header nav ul li a:hover::after
+{
+    width: 100%;
+}
+.main-1
+{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & img 
+    {
+        width: 40%;
+        transform: rotate(20deg);
+    }
+}
+/* html::-webkit-scrollbar
 {
     width: 0.5em;
     background-color: #9a5404;
@@ -188,4 +250,4 @@ section
     justify-content: center;
     background-color: saddlebrown;
     height: 10px;
-}
+} */
