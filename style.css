@@ -64,6 +64,7 @@ header nav ul li a:hover::after
     display: flex;
     justify-content: center;
     align-items: center;
+    background: url();
     & img 
     {
         width: 35%;
@@ -105,16 +106,23 @@ header nav ul li a:hover::after
 {
     height: 50vh;
     width: 100%;
-    display: flex;
-    & .cart 
+    & .content
     {
-        & img 
-        {
-            width: 30%;
-        }
-        & .imgh
+        display: flex;
+        flex-direction: column;
+        gap: 5em;
+        & .cart 
         {
             width: 10%;
+            background-color: var(--bg-4th);
+            & img 
+            {
+                width: 30%;
+            }
+            & .imgh
+            {
+                width: 10%;
+            }
         }
     }
 }
