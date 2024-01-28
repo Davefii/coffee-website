@@ -9,6 +9,7 @@
 }
 :root 
 {
+    --bg-hw:#d5d2d4;
     --bg-white:white;
     --bg-black:black;
     --bg-primary:#65451F;
@@ -22,12 +23,14 @@ header
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    background-color: var(--bg-hw);
 }
 .logo
 {
     color: var(--bg-black);
     font-size: 1.7em;
     font-weight: 600;
+    text-transform: capitalize;
 }
 header nav ul li 
 {
@@ -35,10 +38,11 @@ header nav ul li
 }
 header nav ul li a
 {
+    text-transform: capitalize;
     margin-left: 20px;
     color: var(--bg-black);
     font-size: 1.2em;
-    font-weight: 400;
+    font-weight: 500;
     text-decoration: none;
     position: relative;
 }
@@ -57,22 +61,27 @@ header nav ul li a:hover::after
 {
     width: 100%;
 }
+header a 
+{
+    color: var(--bg-black);
+    font-size: 1.5em;
+}
 .main-1
 {
     height: 100vh;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
-    background: url();
-    & img 
-    {
-        width: 35%;
-        transform: rotate(15deg);
-        filter: drop-shadow(100px 50px 200px var(--bg-second));
-    }
+    background: url(image/pexels-mike-murray-5908362.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     & .data
     {
+        margin-left: 20px;
+        height: fit-content;
+        width: fit-content;
         & h2 
         {
             text-transform: capitalize;
@@ -88,7 +97,7 @@ header nav ul li a:hover::after
         {
             text-transform: capitalize;
             line-height: 90px;
-            padding: 5px 20px;
+            padding: 8px 25px;
             border-radius: 20px;
             text-decoration: none;
             color:  var(--bg-white);
@@ -98,7 +107,7 @@ header nav ul li a:hover::after
         & a:hover
         {
             color: var(--bg-primary) ;
-            background-color: var(--bg-white);
+            background-color: var(--bg-hw);
         }
     }
 }
@@ -106,25 +115,6 @@ header nav ul li a:hover::after
 {
     height: 50vh;
     width: 100%;
-    & .content
-    {
-        display: flex;
-        flex-direction: column;
-        gap: 5em;
-        & .cart 
-        {
-            width: 10%;
-            background-color: var(--bg-4th);
-            & img 
-            {
-                width: 30%;
-            }
-            & .imgh
-            {
-                width: 10%;
-            }
-        }
-    }
 }
 /* html::-webkit-scrollbar
 {
