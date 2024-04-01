@@ -12,7 +12,7 @@
     --bg-hw:#d5d2d4;
     --bg-white:#F1F0EE;
     --bg-black:black;
-    --bg-primary:#30261c;
+    --bg-primary:#473420;
 }
 html::-webkit-scrollbar
 {
@@ -60,6 +60,7 @@ header
                 bottom: -9px;
                 height: 4px;
                 width: 0;
+                border-radius: 20px;
                 background-color: var(--bg-black);
                 transition: 200ms;
             }
@@ -124,7 +125,7 @@ header
 }
 .main-2
 {
-    height: 170vh;
+    height: 130vh;
     width: 100%;
     overflow: hidden;
     & h2
@@ -137,11 +138,10 @@ header
     }
     &  .content
     {
-        height: 100vh;
+        height: 60vh;
         width: 100%;
         display: grid;
-        /* grid-template-columns:22% 22% 22% 22%; */
-        grid-template-columns: repeat(auto-fill, minmax(19%,22%));
+        grid-template-columns: repeat(auto-fill, minmax(21%,19%));
         gap: calc(10%);
         justify-content: center;
         align-items: center;
@@ -196,7 +196,7 @@ header
 }
 .checkout
 {
-    height: 50vh;
+    height: 40vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -236,7 +236,7 @@ header
 }
 .sub
 {
-    height: 50vh;
+    height: 30vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -296,6 +296,7 @@ footer
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border-radius: 20px 20px 0px 0px;
     background-color: var(--bg-primary);
     & .logo
     {
@@ -320,6 +321,10 @@ footer
                 text-transform: capitalize;
                 font-weight: 300;
             }
+            & a:hover 
+            {
+                text-decoration: underline;
+            }
         }
     }
     & .left 
@@ -330,6 +335,284 @@ footer
             margin-left: 20px;
         }
     }
+}
+@media (max-width: 600px) {
+    header 
+    {
+        padding: 15px;
+        & .logo
+        {
+            color: var(--bg-black);
+            font-size: 1.4em;
+        }
+        & nav 
+        {
+            & ul li 
+            {
+                & a 
+                {
+                    margin-left: 9px;
+                    font-size: 0.8em;
+                }
+            }
+        }
+        & a 
+        {
+                font-size: 1em;
+        }
+    }
+    .main-2
+    {
+        height: 90vh;
+    & h2
+    {
+        margin: 10px;
+        letter-spacing: 1px;
+        font-size: 1.2em;
+    }
+    &  .content
+    {
+        grid-template-columns: repeat(auto-fill, minmax(22%,25%));
+        gap: 30px;
+        & .cart
+        {
+            & h3 
+            {
+                font-size: 0.9em;
+            }
+            & .data-card
+            {
+                & p 
+                {
+                    font-size: 0.6em;
+                }
+                & a 
+                {
+                    font-size: 0.2em;
+                    border-radius: 15px;
+                }
+            }
+        }
+    }
+}
+.checkout
+{
+    height: 30vh;
+    & .data-checkout
+    {
+        height: 40vh;
+        & h2 
+        {
+            font-size: 1.3em;
+        }
+        & a 
+        {
+            font-size: 1em;
+        }
+    }
+}
+.sub
+{
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    & h2 
+    {
+        font-size: 1.5em;
+    }
+    & p 
+    {
+        font-size: 0.5em;
+        line-height: 20px;
+    }
+    & form 
+    {
+        gap: 10px;
+        & input[type=email]
+        {
+            height: 5vh;
+            width: 60%;
+            padding: 5px 9px;
+        }
+        & input[type=submit]
+        {
+            padding: 5px 9px;
+        }
+    }
+}
+footer
+{
+    height: 30vh;
+    & .logo
+    {
+        font-size: 1em;
+    } 
+    & .right, .center, .left
+    {
+        & h4
+        {
+            font-size: 0.6em;
+            line-height: 10px;
+        }
+        & ul li 
+        {
+            & a 
+            {
+                font-size: 0.4em;
+            }
+        }
+    }
+    & .left 
+    {
+        & ul li 
+        {
+            margin-left: 5px;
+        }
+    }
+}
+}
+@media (max-width: 758px) 
+{
+    header 
+    {
+        padding: 15px;
+        & .logo
+        {
+            color: var(--bg-black);
+            font-size: 1.4em;
+        }
+        & nav 
+        {
+            & ul li 
+            {
+                & a 
+                {
+                    margin-left: 9px;
+                    font-size: 1em;
+                }
+            }
+        }
+        & a 
+        {
+                font-size: 1em;
+        }
+    }
+    .main-2
+    {
+        height: 137vh;
+    & h2
+    {
+        margin: 10px;
+        letter-spacing: 1px;
+        font-size: 1.3em;
+    }
+    &  .content
+    {
+        grid-template-columns: repeat(auto-fill, minmax(22%,25%));
+        gap: 30px;
+        & .cart
+        {
+            & h3 
+            {
+                font-size: 0.9em;
+            }
+            & .data-card
+            {
+                & p 
+                {
+                    font-size: 0.6em;
+                }
+                & a 
+                {
+                    font-size: 0.2em;
+                    border-radius: 15px;
+                }
+            }
+        }
+    }
+}
+.checkout
+{
+    height: 30vh;
+    & .data-checkout
+    {
+        height: 40vh;
+        & h2 
+        {
+            font-size: 1.3em;
+        }
+        & a 
+        {
+            font-size: 1em;
+        }
+    }
+}
+.sub
+{
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    & h2 
+    {
+        font-size: 1.5em;
+    }
+    & p 
+    {
+        font-size: 0.5em;
+        line-height: 20px;
+    }
+    & form 
+    {
+        gap: 10px;
+        & input[type=email]
+        {
+            height: 5vh;
+            width: 60%;
+            padding: 5px 9px;
+        }
+        & input[type=submit]
+        {
+            padding: 5px 9px;
+        }
+    }
+}
+footer
+{
+    height: 30vh;
+    & .logo
+    {
+        font-size: 1em;
+    } 
+    & .right, .center, .left
+    {
+        & h4
+        {
+            font-size: 1em;
+            line-height: 10px;
+        }
+        & ul li 
+        {
+            & a 
+            {
+                font-size: 0.5em;
+                line-height: 5px;
+            }
+        }
+    }
+    & .left 
+    {
+        & ul li 
+        {
+            margin-left: 5px;
+        }
+    }
+}
 }
 /* html::-webkit-scrollbar
 {
