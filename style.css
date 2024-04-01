@@ -140,7 +140,9 @@ header
         height: 100vh;
         width: 100%;
         display: grid;
-        grid-template-columns:22% 22% 22% 22%;
+        /* grid-template-columns:22% 22% 22% 22%; */
+        grid-template-columns: repeat(auto-fill, minmax(19%,22%));
+        gap: calc(10%);
         justify-content: center;
         align-items: center;
         gap: 30px;
@@ -153,10 +155,8 @@ header
             gap: 10px;
             &  img
             {
-                height: 400px;
-                width: 100%;
+                width:100%;
                 object-fit: cover;
-                object-position: center;
                 border-radius: 10px;
             }
             & h3 
@@ -181,7 +181,7 @@ header
                     text-decoration: none;
                     background-color: var(--bg-primary);
                     color: var(--bg-white);
-                    padding: 6px 15px;
+                    padding: 6px 10px;
                     border-radius: 20px;
                     transition: 200ms;
                 }
