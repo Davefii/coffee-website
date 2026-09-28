@@ -84,7 +84,7 @@ header
     display: flex;
     justify-content: left;
     align-items: center;
-    background: url(image/pexels-mike-murray-5908362.jpg);
+    /*background: url(image/pexels-mike-murray-5908362.jpg);*/
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
